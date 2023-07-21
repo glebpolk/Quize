@@ -6,6 +6,7 @@ const {EOL} = require("os");
 class Reader {
   constructor() {}
 
+  
   readThemes() {
     const data = fs.readFileSync(
       `${__dirname}/topics/nighthawk_flashcard_data.txt`,
