@@ -13,7 +13,8 @@
     "linebreak-style": ["error", "windows"],
     "object-curly-spacing": ["error", "never"],
     "import/prefer-default-export": "off",
-    "comma-dangle": ["error", "always-multiline"],
-    "no-plusplus": ["error", {"allowForLoopAfterthoughts": true}]
+    "comma-dangle": 0,
+    "no-plusplus": ["error", {"allowForLoopAfterthoughts": true}],
+    
   }
 }

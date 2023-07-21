@@ -3,8 +3,7 @@ const fs = require("fs/promises");
 const readlineSync = require("readline-sync");
 
 function getData(path, code = "utf-8") {
-  const text = fs
-    .readFile(path, code)
+  fs.readFile(path, code)
     .then(d => d)
     .then(d => d.split(EOL).filter(e => e !== ""))
     .then(arr => {
@@ -18,22 +17,28 @@ function getData(path, code = "utf-8") {
       });
       return resultArr;
     })
-    .then(d =>
+    .then(d => {
+      let count = 0;
       d.forEach(e => {
         const userAnswer = readlineSync.question(e.question);
         if (userAnswer.trim().toLowerCase() === e.answer) {
-          console.log("Верно👍");
+          console.clear();
+          console.log("Верно👍👍👍👍👍👍👍👍👍👍👍" + EOL.repeat(3));
+          count++;
         } else {
+          console.clear();
           console.log(
-            `Правильный ответ: ${e.answer}. Ваш ответ: ${userAnswer}`
+            `👎👎👎👎👎👎👎👎👎👎👎Правильный ответ: ${
+              e.answer + EOL.repeat(3)
+            }`
           );
         }
-      })
-    );
+        console.log(
+          `Ты ответил правильно на ${count} вопросов ${EOL.repeat(2)}`
+        );
+      });
+    });
 }
-// const topics = ["cat", "dog"];
-
-// const indexTheme = readlineSync.keyInSelect(topics, "Choose theme");
 (() => {
   const topics = ["nighthawk", "otter", "raccoon"];
   const index = readlineSync.keyInSelect(topics, "Choose theme");
