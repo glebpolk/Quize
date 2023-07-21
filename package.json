@@ -1,20 +1,28 @@
 {
-  "name": "flashcards",
+  "name": "disney",
   "version": "1.0.0",
   "description": "",
-  "main": "runner.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elbrus-Bootcamp/checkpoint-strings.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "readline-sync": "^1.4.10"
+  "bugs": {
+    "url": "https://github.com/Elbrus-Bootcamp/checkpoint-strings/issues"
   },
+  "homepage": "https://github.com/Elbrus-Bootcamp/checkpoint-strings#readme",
   "devDependencies": {
-    "eslint": "^8.23.0",
+    "eslint": "^8.17.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.26.0"
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^26.5.3",
+    "prettier": "^3.0.0"
   }
 }
