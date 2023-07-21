@@ -23,6 +23,7 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jest": "^26.5.3",
-    "prettier": "^3.0.0"
+    "prettier": "^3.0.0",
+    "readline-sync": "^1.4.10"
   }
 }
